@@ -44,11 +44,23 @@ fn main(){
     // }
     // println!("LIFTOFF!!!");
 
-    // Looping through a Collection with for
+    // Looping through a Collection with while
     let a = [10, 20, 30, 40, 50];
-    let mut index = 0;
-    while index < 5 {
-        println!("the value is: {}", a[index]);
-        index += 1;
+    // let mut index = 0;
+    // while index < 5 {
+    //     println!("the value is: {}", a[index]);
+    //     index += 1;
+    // }
+
+    // using for
+    for element in a {
+        println!("the value is: {element}");
     }
+
+    for number in (1..4).rev() {
+        println!("{number}");
+    }
+    println!("LIFTOFF!!!");
+
+
 }
