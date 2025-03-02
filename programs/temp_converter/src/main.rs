@@ -7,7 +7,7 @@ fn main() {
     println!("Enter temperature value: ");
     io::stdin()
         .read_line(&mut temperature)
-        .expect("failed to get temperature from the input!");
+        .expect("failed to get temperature from the input!"); 
     
     let temperature: u32 = match temperature.trim().parse() {
         Ok(num) => num,
@@ -16,9 +16,13 @@ fn main() {
             return;
         },
     };
-    
+    let temperatureInFahrenheit = convertToFahrenheit(temperature);
+    println!("Temperature in Cesius is: {temperature}");
+    println!("Temperature in Fahrenheit is: {temperatureInFahrenheit}");
 
-    println!("Temperature is {temperature}");
 
+}
 
+fn convertToFahrenheit(temperatureInCelsius: u32) -> u32 {
+    return (temperatureInCelsius * 9 / 5) + 32;
 }
