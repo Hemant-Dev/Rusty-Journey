@@ -8,10 +8,12 @@ fn main() {
 
     // Mutable References
     let mut s = String::from("hello");
-    {
-        let r1 = &mut s;
-    }
-    let r2 = &mut s;
+    let r1 = &s;
+    let r2 = &s;
+    println!("{r1} and {r2}");
+
+    let r3 = &mut s;
+    println!("{r3}");
 
 }
 fn calculate_length(s: &String) -> usize {
