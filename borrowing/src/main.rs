@@ -3,8 +3,15 @@ fn main() {
     // let len = calculate_length(&s1);
 
     // println!("The length of '{s1}' is {len}.");
+    // let mut s = String::from("hello");
+    // change(&mut s);
+
+    // Mutable References
     let mut s = String::from("hello");
-    change(&mut s);
+    let r1 = &mut s;
+    let r2 = &mut s;
+
+    println!("{} {}", r1, r2);
 }
 fn calculate_length(s: &String) -> usize {
     s.len()
